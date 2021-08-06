@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    cuunter = 0;
+    counter = 0;
 
 }
 
@@ -19,6 +19,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->pushButton_2->setText("0");
+    counter++;
+
+    if(counter == 11)
+        counter = 0;
+
+    ui->pushButton_2->setText(QString().number(counter));
 }
 
