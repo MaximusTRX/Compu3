@@ -26,4 +26,3 @@ void MainWindow::on_pushButton_clicked()
 
     ui->pushButton_2->setText(QString().number(counter));
 }
-
