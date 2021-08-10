@@ -21,7 +21,7 @@ void MainWindow::on_pushButton_clicked()
 {
     counter++;
 
-    if(counter == 11)
+    if(counter == 13)
         counter = 0;
 
     ui->pushButton_2->setText(QString().number(counter));
