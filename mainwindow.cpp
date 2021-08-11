@@ -7,12 +7,16 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    QTimer1 = new QTimer(this);
+    connect(QTimer1, &QTimer::timeout, this, &MainWindow::onQTimer1);
+
     counter = 0;
 
 }
 
 MainWindow::~MainWindow()
 {
+    delete QTimer1;
     delete ui;
 }
 
@@ -25,4 +29,21 @@ void MainWindow::on_pushButton_clicked()
         counter = 0;
 
     ui->pushButton_2->setText(QString().number(counter));
+    ui->lineEdit->setText(QString("%1").arg(counter));
 }
+
+void MainWindow::onQTimer1(){
+
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    counter--;
+
+    if(counter == 0)
+        counter = 13;
+
+    ui->pushButton_2->setText(QString().number(counter));
+    ui->lineEdit->setText(QString("%1").arg(counter));
+}
+
