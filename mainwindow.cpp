@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->statusbar->showMessage("Hola mundo...");
+
     QTimer1 = new QTimer(this);
     connect(QTimer1, &QTimer::timeout, this, &MainWindow::onQTimer1);
 
