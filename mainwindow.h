@@ -28,6 +28,6 @@ private:
 
     QTimer *QTimer1;
 
-    int counter;
+    int counter, direction = 0;
 };
 #endif // MAINWINDOW_H
