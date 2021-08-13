@@ -51,6 +51,7 @@ void MainWindow::onQTimer1(){
         counter = 13;
 
     ui->lineEdit->setText(QString("%1").arg(counter, 5, 10 , QChar('0'))); //arg(VariableAMostrar, LugaresReservados, formato, QChar('CharParaCompletar')); formato: 2(binario), 10(decimal), 16(hexa)
+    ui->lcdNumber->display(QString("%1").arg(counter, 5, 10 , QChar('0')));
 }
 
 void MainWindow::on_pushButton_2_clicked()
